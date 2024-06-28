@@ -9,7 +9,6 @@ def post_data():
   webhook_url = request.args.get('webhook')
 
   data = request.get_json()
-  print(webhook_url)
   requests.post(webhook_url, json=data)
   return jsonify({'message': 'Data received successfully'})
 
